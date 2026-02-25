@@ -1,10 +1,10 @@
 <mxfile host="65bd71144e">
     <diagram name="Page-1" id="q5gKrhV2WKv8pvfnoQvh">
-        <mxGraphModel dx="1359" dy="1888" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1528" dy="1887" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="7" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="6bDfexBDMjg7O7AECw8N-1" target="2" edge="1">
+                <mxCell id="7" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#FF0000" parent="1" source="6bDfexBDMjg7O7AECw8N-1" target="2" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="650" y="750"/>
@@ -52,7 +52,7 @@
                         <mxGeometry x="80" y="700" width="200" height="180" as="geometry"/>
                     </mxCell>
                 </object>
-                <mxCell id="5" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="6bDfexBDMjg7O7AECw8N-8" target="2" edge="1">
+                <mxCell id="5" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=#FF0000" parent="1" source="6bDfexBDMjg7O7AECw8N-8" target="2" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="1030" y="160"/>
@@ -70,7 +70,7 @@
                         <mxGeometry x="530" y="530" width="240" height="160" as="geometry"/>
                     </mxCell>
                 </object>
-                <mxCell id="6" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="6bDfexBDMjg7O7AECw8N-10" target="2" edge="1">
+                <mxCell id="6" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#FF0000" parent="1" source="6bDfexBDMjg7O7AECw8N-10" target="2" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="1210" y="470"/>
@@ -182,16 +182,16 @@
                         </mxGeometry>
                     </mxCell>
                 </object>
-                <mxCell id="8" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="2" target="3" edge="1">
+                <mxCell id="8" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#FF0000" parent="1" source="2" target="3" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="2" value="OpenTelemetry Collector&lt;div&gt;принимает трейсы от сервисов (OTLP), буферизует/батчит, отправляет в хранилище трейсинга&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#FF0000;strokeWidth=2;" parent="1" vertex="1">
                     <mxGeometry x="515" y="-70" width="270" height="130" as="geometry"/>
                 </mxCell>
-                <mxCell id="9" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="3" target="4" edge="1">
+                <mxCell id="9" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#FF0000" parent="1" source="3" target="4" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="16" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="3" target="15">
+                <mxCell id="16" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#00AA00" parent="1" source="3" target="15" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="985" y="-190"/>
@@ -199,7 +199,7 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="17" value="trace query / trace export (в реальности это может&amp;nbsp;&lt;div&gt;быть Tempo API/Jaeger query + фильтры по oreder_id)&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="16">
+                <mxCell id="17" value="trace query / trace export (в реальности это может&amp;nbsp;&lt;div&gt;быть Tempo API/Jaeger query + фильтры по oreder_id)&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="16" vertex="1" connectable="0">
                     <mxGeometry x="-0.83" y="2" relative="1" as="geometry">
                         <mxPoint as="offset"/>
                     </mxGeometry>
@@ -222,16 +222,16 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="12" value="Alerting (Alertmanager / Grafana Alerting)&lt;div&gt;правила и уведомления&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#00AA00;strokeWidth=2;" vertex="1" parent="1">
+                <mxCell id="12" value="Alerting (Alertmanager / Grafana Alerting)&lt;div&gt;правила и уведомления&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#00AA00;strokeWidth=2;" parent="1" vertex="1">
                     <mxGeometry x="515" y="-450" width="270" height="130" as="geometry"/>
                 </mxCell>
-                <mxCell id="23" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="13" target="12">
+                <mxCell id="23" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#00AA00" parent="1" source="13" target="12" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="13" value=" Metrics Storage (Prometheus)&lt;div&gt;собирает метрики (в т.ч. derived metrics по заказам)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#00AA00;strokeWidth=2;" vertex="1" parent="1">
+                <mxCell id="13" value=" Metrics Storage (Prometheus)&lt;div&gt;собирает метрики (в т.ч. derived metrics по заказам)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#00AA00;strokeWidth=2;" parent="1" vertex="1">
                     <mxGeometry x="200" y="-450" width="270" height="130" as="geometry"/>
                 </mxCell>
-                <mxCell id="20" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="14" target="13">
+                <mxCell id="20" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;strokeColor=#00AA00" parent="1" source="14" target="13" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="962" y="-530"/>
@@ -239,10 +239,10 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="14" value="Dashboard (Grafana)&lt;div&gt;дашборды SLA/латентности/просрочек и “Order pipeline health”&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#00AA00;strokeWidth=2;" vertex="1" parent="1">
+                <mxCell id="14" value="Dashboard (Grafana)&lt;div&gt;дашборды SLA/латентности/просрочек и “Order pipeline health”&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#00AA00;strokeWidth=2;" parent="1" vertex="1">
                     <mxGeometry x="827" y="-450" width="270" height="130" as="geometry"/>
                 </mxCell>
-                <mxCell id="18" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="15" target="13">
+                <mxCell id="18" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;strokeColor=#00AA00" parent="1" source="15" target="13" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="1295" y="-530"/>
@@ -250,12 +250,12 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="19" value="/metrics (derived order SLA metrics)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="18">
+                <mxCell id="19" value="/metrics (derived order SLA metrics)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="18" vertex="1" connectable="0">
                     <mxGeometry x="-0.9098" y="-1" relative="1" as="geometry">
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="15" value="Order Flow Monitoring / SLA Controller&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;строит “мониторинг процесса прохождения заказа” на основе трейсинга&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#00AA00;strokeWidth=2;" vertex="1" parent="1">
+                <mxCell id="15" value="Order Flow Monitoring / SLA Controller&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;строит “мониторинг процесса прохождения заказа” на основе трейсинга&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#00AA00;strokeWidth=2;" parent="1" vertex="1">
                     <mxGeometry x="1160" y="-450" width="270" height="130" as="geometry"/>
                 </mxCell>
             </root>

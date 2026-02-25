@@ -1,0 +1,62 @@
+@startuml
+title MES Caching — Sequence Diagrams (Read dashboard + Update order status)
+
+skinparam ParticipantPadding 20
+skinparam BoxPadding 10
+
+' ======= Диаграмма 1: Чтение списка заказов (дашборд) =======
+== READ: Загрузка списка заказов по статусу (дашборд MES) ==
+
+actor Operator as op
+participant "MES Frontend (React)" as fe
+participant "MES API (C#)" as api
+database "Redis Cache" as cache
+database "MES DB" as db
+
+op -> fe: Открывает дашборд (status, page, pageSize)
+fe -> api: GET /orders?status={S}&page={P}&pageSize={N}
+
+api -> cache: GET mes:orders:list:{S}:{P}:{N}
+alt Cache HIT
+  cache --> api: cached orders list
+  api --> fe: 200 OK (orders list)
+  fe --> op: Отображает список заказов
+else Cache MISS
+  cache --> api: null
+  api -> db: SELECT orders WHERE status={S}\nORDER BY createdAt DESC\nLIMIT {N} OFFSET {P}
+  db --> api: rows (orders list)
+  api -> cache: SET mes:orders:list:{S}:{P}:{N} = payload\nTTL = 10s
+  api --> fe: 200 OK (orders list)
+  fe --> op: Отображает список заказов
+end
+
+' ======= Диаграмма 2: Изменение статуса заказа + инвалидация =======
+== WRITE: Изменение статуса заказа + инвалидация кеша ==
+
+op -> fe: Берёт заказ / меняет статус (orderId, newStatus)
+fe -> api: POST /orders/{orderId}/status {newStatus}
+
+api -> db: UPDATE orders SET status={newStatus}\nWHERE id={orderId}
+db --> api: OK
+
+note right of api
+Инвалидация: удаляем только "горячие" страницы\n(например page=1..3) для затронутых статусов
+end note
+
+' Вариант: если известен oldStatus (получили из БД/кэша/в запросе)
+api -> cache: DEL mes:orders:list:{oldStatus}:1:{N}
+api -> cache: DEL mes:orders:list:{oldStatus}:2:{N}
+api -> cache: DEL mes:orders:list:{oldStatus}:3:{N}
+
+api -> cache: DEL mes:orders:list:{newStatus}:1:{N}
+api -> cache: DEL mes:orders:list:{newStatus}:2:{N}
+api -> cache: DEL mes:orders:list:{newStatus}:3:{N}
+
+' (Опционально) инвалидируем счётчики по статусам
+api -> cache: DEL mes:orders:count:{oldStatus}
+api -> cache: DEL mes:orders:count:{newStatus}
+
+api --> fe: 200 OK
+fe --> op: UI обновляет статус / перезагружает списки при необходимости
+
+@enduml
